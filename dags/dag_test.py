@@ -1,7 +1,7 @@
 from airflow import DAG
 import datetime
 import pendulum
-from airflow.operators.python import Python
+from airflow.operators.python import PythonOperator
 import random
 
 with DAG(
