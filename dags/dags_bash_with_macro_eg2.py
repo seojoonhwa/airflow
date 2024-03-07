@@ -4,8 +4,8 @@ from airflow.operators.bash import BashOperator
 
 with DAG(
     dag_id="dags_bash_with_macro_eg2",
-    schedule="10 0 * * 6#2",
-    start_date=pendulum.datetime(2023, 3, 1, tz="Asia/Seoul"),
+    schedule="10 0 * * 6#2", # 매달 둘째 주 토요일날 돈다
+    start_date=pendulum.datetime(2024, 3, 1, tz="Asia/Seoul"),
     catchup=False
 ) as dag:
     # START_DATE: 2주전 월요일, END_DATE: 2주전 토요일
